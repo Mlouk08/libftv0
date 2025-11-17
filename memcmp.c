@@ -6,7 +6,13 @@
 /*   By: omlouk <omlouk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 15:19:46 by omlouk            #+#    #+#             */
-/*   Updated: 2025/11/17 15:19:48 by omlouk           ###   ########.fr       */
+/*   Updated: 2025/11/17 17:08:38 by omlouk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <unistd.h>
+
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
+{
+
+}

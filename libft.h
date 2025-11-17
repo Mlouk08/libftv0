@@ -6,7 +6,7 @@
 /*   By: omlouk <omlouk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 13:06:38 by omlouk            #+#    #+#             */
-/*   Updated: 2025/11/17 14:23:44 by omlouk           ###   ########.fr       */
+/*   Updated: 2025/11/17 17:09:31 by omlouk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,9 @@ int				ft_isalpha(char c);
 int				ft_isalnum(int arg);
 void			ft_bzero(void *s, size_t n);
 char			*ft_strchr(const char *s, int c);
+void			*ft_memchr(const void *s, int c, size_t n);
+int				ft_atoi(char *str);
+char			*ft_strnstr(const char *big, const char *little, size_t len);
+int				ft_memcmp(const void *s1, const void *s2, size_t n);
 
 #endif
