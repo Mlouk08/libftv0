@@ -1,29 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strchr.c                                           :+:      :+:    :+:   */
+/*   memchr.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: omlouk <omlouk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/17 14:22:38 by omlouk            #+#    #+#             */
-/*   Updated: 2025/11/17 14:53:59 by omlouk           ###   ########.fr       */
+/*   Created: 2025/11/17 15:07:45 by omlouk            #+#    #+#             */
+/*   Updated: 2025/11/17 15:08:26 by omlouk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-char	*ft_strchr(const char *s, int c)
+void	*memchr(const void *s, int c, size_t n)
 {
-	int	i;
 
-	i = 0;
-	while (str[i])
-	{
-		if (str[i] == c)
-			return (str[i]);
-		i++;
-	}
-	if (str[i] == c)
-		return (str[i]);
-	return (NULL);
 }

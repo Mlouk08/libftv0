@@ -1,29 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strchr.c                                           :+:      :+:    :+:   */
+/*   strncmp.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: omlouk <omlouk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/17 14:22:38 by omlouk            #+#    #+#             */
-/*   Updated: 2025/11/17 14:53:59 by omlouk           ###   ########.fr       */
+/*   Created: 2025/11/17 15:04:42 by omlouk            #+#    #+#             */
+/*   Updated: 2025/11/17 15:06:55 by omlouk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-char	*ft_strchr(const char *s, int c)
+int	strncmp(const char *s1, const char *s2, size_t n)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
-	while (str[i])
+	while (i < n)
 	{
-		if (str[i] == c)
-			return (str[i]);
+		if (s1[i] != s2[i] || s1[i] == '\0')
+			return (s1[i] - s2[i]);
 		i++;
 	}
-	if (str[i] == c)
-		return (str[i]);
-	return (NULL);
+	return (0);
 }
