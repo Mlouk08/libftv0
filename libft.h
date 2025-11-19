@@ -6,7 +6,7 @@
 /*   By: omlouk <omlouk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 13:06:38 by omlouk            #+#    #+#             */
-/*   Updated: 2025/11/18 23:10:30 by omlouk           ###   ########.fr       */
+/*   Updated: 2025/11/19 07:26:07 by omlouk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,6 @@ char			*ft_strnstr(const char *big, const char *little, size_t len);
 int				ft_memcmp(const void *s1, const void *s2, size_t n);
 void            *ft_calloc(size_t nmemb, size_t size);
 char            *strdup(const char *s);
+void            *ft_memset(void *b, int c, size_t len)
 
 #endif
