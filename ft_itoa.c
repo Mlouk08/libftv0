@@ -6,13 +6,13 @@
 /*   By: omlouk <omlouk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/19 08:05:11 by omlouk            #+#    #+#             */
-/*   Updated: 2025/11/19 10:52:48 by omlouk           ###   ########.fr       */
+/*   Updated: 2025/11/19 14:45:12 by omlouk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	get_len(int n)
+size_t	get_len(long n)
 {
 	size_t	len;
 
@@ -23,7 +23,7 @@ size_t	get_len(int n)
 		len++;
 	while (n)
 	{
-		n /= 10;
+		n = n / 10;
 		len++;
 	}
 	return (len);
@@ -31,33 +31,37 @@ size_t	get_len(int n)
 
 char	*ft_itoa(int n)
 {
-	size_t	len;
-	size_t	i;
-	char	*result;
+	char	*temp;
+	int		flag;
+	size_t	size;
+	long	nb;
 
-	len = get_len(n);
-	if (!(result = (char*)malloc(len + 1)))
-		return (NULL);
-	result[len] = '\0';
-	if (n < 0)
+	nb = (long)n;
+	flag = 0;
+	if (nb < 0)
 	{
-		result[0] = '-';
-		i = 1;
+		nb = -nb;
+		flag = 1;
 	}
+	size = get_len(nb) + flag;
+	temp = (char *)malloc(sizeof(char) * (size + 1));
+	temp[size--] = '\0';
+	while (size)
+	{
+		temp[size--] = nb % 10 + '0';
+		nb = nb / 10;
+	}
+	if (n < 0 && size == 0)
+		temp[size] = '-';
 	else
-		i = 0;
-	while (len-- > i)
-	{
-		if (n < 0)
-		{
-			result[len] = '0' + n % 10 * (-1);
-			n = n / 10;
-		}
-		else
-		{
-			result[len] = '0' + n % 10;
-			n = n / 10;
-		}
-	}
-	return (result);
+		temp[size] = nb % 10 + '0';
+	return (temp);
 }
+
+// #include <stdio.h>
+
+// int main()
+// {
+// 	printf("%s", ft_itoa(0));
+// 	return 1;
+// }

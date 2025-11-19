@@ -6,7 +6,7 @@
 /*   By: omlouk <omlouk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/19 08:07:37 by omlouk            #+#    #+#             */
-/*   Updated: 2025/11/19 10:21:07 by omlouk           ###   ########.fr       */
+/*   Updated: 2025/11/19 15:50:01 by omlouk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,37 +34,13 @@ char	*ft_strcat(char *dest, char *src)
 	return (dest);
 }
 
-int	ft_size_nxt(int size, char **strs, char *sep)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	int		i;
+	char	*s;
 	int		joined_size;
 
-	i = 0;
-	joined_size = 0;
-	while (i < size)
-	{
-		joined_size += ft_strlen(strs[i]);
-		i++;
-	}
-	joined_size += (size - 1) * ft_strlen(sep);
-	return (joined_size);
-}
-
-char	*ft_strjoin(int size, char **strs, char *sep)
-{
-	char	*joined;
-	int		i;
-	int		joined_size;
-
-	i = 0;
-	if (size <= 0)
-	{
-		joined = (char *)malloc(1);
-		joined[0] = '\0';
-		return (joined);
-	}
-	joined_size = ft_size_nxt(size, strs, sep);
-	joined = (char *)malloc((joined_size + 1) * sizeof(char));
+	joined_size = ft_strlen(s1) + ft_strlen(s2);
+	s = (char *)malloc((joined_size + 1) * sizeof(char));
 	while (joined_size-- >= 0)
 		joined[joined_size] = '\0';
 	while (i < size)
