@@ -6,11 +6,11 @@
 /*   By: omlouk <omlouk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 11:28:33 by omlouk            #+#    #+#             */
-/*   Updated: 2025/11/17 13:17:32 by omlouk           ###   ########.fr       */
+/*   Updated: 2025/11/19 10:59:44 by omlouk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 unsigned int	ft_sizeof(char *str)
 {

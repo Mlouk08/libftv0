@@ -6,11 +6,11 @@
 /*   By: omlouk <omlouk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 16:51:54 by omlouk            #+#    #+#             */
-/*   Updated: 2025/10/27 16:54:33 by omlouk           ###   ########.fr       */
+/*   Updated: 2025/11/19 10:58:13 by omlouk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 int	ft_isprint(int arg)
 {

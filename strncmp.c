@@ -6,11 +6,11 @@
 /*   By: omlouk <omlouk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 15:04:42 by omlouk            #+#    #+#             */
-/*   Updated: 2025/11/17 15:06:55 by omlouk           ###   ########.fr       */
+/*   Updated: 2025/11/19 11:00:22 by omlouk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 int	strncmp(const char *s1, const char *s2, size_t n)
 {

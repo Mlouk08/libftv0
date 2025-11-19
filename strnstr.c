@@ -6,11 +6,10 @@
 /*   By: omlouk <omlouk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 15:19:23 by omlouk            #+#    #+#             */
-/*   Updated: 2025/11/18 23:28:09 by omlouk           ###   ########.fr       */
+/*   Updated: 2025/11/19 11:00:29 by omlouk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "libft.h"
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)

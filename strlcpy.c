@@ -6,11 +6,10 @@
 /*   By: omlouk <omlouk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 10:57:52 by omlouk            #+#    #+#             */
-/*   Updated: 2025/11/17 13:44:31 by omlouk           ###   ########.fr       */
+/*   Updated: 2025/11/19 10:59:51 by omlouk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)

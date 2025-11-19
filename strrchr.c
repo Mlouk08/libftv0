@@ -6,11 +6,10 @@
 /*   By: omlouk <omlouk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 14:54:55 by omlouk            #+#    #+#             */
-/*   Updated: 2025/11/17 15:04:23 by omlouk           ###   ########.fr       */
+/*   Updated: 2025/11/19 11:00:33 by omlouk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)

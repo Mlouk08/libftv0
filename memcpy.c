@@ -6,11 +6,11 @@
 /*   By: omlouk <omlouk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 09:23:20 by omlouk            #+#    #+#             */
-/*   Updated: 2025/11/18 23:18:23 by omlouk           ###   ########.fr       */
+/*   Updated: 2025/11/19 10:58:35 by omlouk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {

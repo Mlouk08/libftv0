@@ -6,11 +6,11 @@
 /*   By: omlouk <omlouk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 17:25:39 by omlouk            #+#    #+#             */
-/*   Updated: 2025/10/27 17:36:46 by omlouk           ###   ########.fr       */
+/*   Updated: 2025/11/19 11:00:51 by omlouk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 int	ft_toupper(int arg)
 {

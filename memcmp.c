@@ -6,16 +6,16 @@
 /*   By: omlouk <omlouk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 15:19:46 by omlouk            #+#    #+#             */
-/*   Updated: 2025/11/18 23:17:29 by omlouk           ###   ########.fr       */
+/*   Updated: 2025/11/19 10:58:29 by omlouk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
-int		ft_memcmp(const void *s1, const void *s2, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	unsigned char *ptr1;
-	unsigned char *ptr2;
+	unsigned char	*ptr1;
+	unsigned char	*ptr2;
 
 	ptr1 = (unsigned char *)s1;
 	ptr2 = (unsigned char *)s2;

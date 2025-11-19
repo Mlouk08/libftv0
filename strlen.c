@@ -6,9 +6,11 @@
 /*   By: omlouk <omlouk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 16:54:53 by omlouk            #+#    #+#             */
-/*   Updated: 2025/11/17 10:56:09 by omlouk           ###   ########.fr       */
+/*   Updated: 2025/11/19 11:00:12 by omlouk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 size_t	ft_strlen(const char *str)
 {

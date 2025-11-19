@@ -6,14 +6,13 @@
 /*   By: omlouk <omlouk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/19 08:05:11 by omlouk            #+#    #+#             */
-/*   Updated: 2025/11/19 08:09:56 by omlouk           ###   ########.fr       */
+/*   Updated: 2025/11/19 10:52:48 by omlouk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "libft.h"
 
-size_t  get_len(int n)
+size_t	get_len(int n)
 {
 	size_t	len;
 
@@ -30,11 +29,11 @@ size_t  get_len(int n)
 	return (len);
 }
 
-char*   ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	size_t	len;
 	size_t	i;
-	char* result;
+	char	*result;
 
 	len = get_len(n);
 	if (!(result = (char*)malloc(len + 1)))
@@ -48,6 +47,7 @@ char*   ft_itoa(int n)
 	else
 		i = 0;
 	while (len-- > i)
+	{
 		if (n < 0)
 		{
 			result[len] = '0' + n % 10 * (-1);
@@ -58,5 +58,6 @@ char*   ft_itoa(int n)
 			result[len] = '0' + n % 10;
 			n = n / 10;
 		}
+	}
 	return (result);
 }

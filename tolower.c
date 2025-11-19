@@ -6,11 +6,11 @@
 /*   By: omlouk <omlouk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 17:37:03 by omlouk            #+#    #+#             */
-/*   Updated: 2025/10/27 17:40:11 by omlouk           ###   ########.fr       */
+/*   Updated: 2025/11/19 11:00:43 by omlouk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 int	ft_tolower(int arg)
 {

@@ -6,11 +6,11 @@
 /*   By: omlouk <omlouk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 16:38:38 by omlouk            #+#    #+#             */
-/*   Updated: 2025/10/27 16:40:35 by omlouk           ###   ########.fr       */
+/*   Updated: 2025/11/19 10:57:57 by omlouk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 int	ft_isascii(int arg)
 {

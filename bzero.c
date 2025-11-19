@@ -6,11 +6,11 @@
 /*   By: omlouk <omlouk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 09:12:30 by omlouk            #+#    #+#             */
-/*   Updated: 2025/11/17 09:21:13 by omlouk           ###   ########.fr       */
+/*   Updated: 2025/11/19 10:53:10 by omlouk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {
