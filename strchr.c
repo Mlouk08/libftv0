@@ -6,7 +6,7 @@
 /*   By: omlouk <omlouk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 14:22:38 by omlouk            #+#    #+#             */
-/*   Updated: 2025/11/17 14:53:59 by omlouk           ###   ########.fr       */
+/*   Updated: 2025/11/18 23:25:43 by omlouk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,12 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	int	i;
+	char	*ptr;
+	char	sym;
 
-	i = 0;
-	while (str[i])
-	{
-		if (str[i] == c)
-			return (str[i]);
-		i++;
-	}
-	if (str[i] == c)
-		return (str[i]);
-	return (NULL);
+	ptr = (char *)s;
+	sym = (char)c;
+	while (*ptr && !(*ptr == sym))
+		ptr++;
+	return ((*ptr == sym) ? ptr : NULL);
 }

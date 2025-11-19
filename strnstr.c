@@ -6,36 +6,34 @@
 /*   By: omlouk <omlouk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 15:19:23 by omlouk            #+#    #+#             */
-/*   Updated: 2025/11/17 17:04:54 by omlouk           ###   ########.fr       */
+/*   Updated: 2025/11/18 23:28:09 by omlouk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include "libft.h"
 
-char	*ft_strnstr(const char *big, const char *little, size_t len);
-
-char	*ft_strstr(char *str, char *to_find)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	int	i;
-	int	j;
+	char	*h;
+	size_t	needle_len;
+	size_t	j;
+	size_t	i;
 
+	h = (char *)haystack;
+	if (!(needle_len = ft_strlen(needle)))
+		return (h);
+	if (ft_strlen(haystack) < needle_len || len < needle_len)
+		return (NULL);
 	i = 0;
-	if (!to_find[i])
-		return (str);
-	while (str[i])
+	while (h[i] && i <= len - needle_len)
 	{
 		j = 0;
-		if (to_find[j] == str[i])
-		{
-			while (str[i + j] && to_find[j] && to_find[j] == str[i + j])
-			{
-				j++;
-			}
-		}
-		if (j == ft_strlen(to_find))
-			return (str + i);
-		else
-			i++;
+		while (needle[j] && needle[j] == h[i + j])
+			j++;
+		if (j == needle_len)
+			return (&h[i]);
+		i++;
 	}
-	return (0);
+	return (NULL);
 }

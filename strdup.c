@@ -1,25 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   memcpy.c                                           :+:      :+:    :+:   */
+/*   strdup.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: omlouk <omlouk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/17 09:23:20 by omlouk            #+#    #+#             */
-/*   Updated: 2025/11/18 23:18:23 by omlouk           ###   ########.fr       */
+/*   Created: 2025/11/18 23:09:14 by omlouk            #+#    #+#             */
+/*   Updated: 2025/11/18 23:24:45 by omlouk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+char	*strdup(const char *s)
 {
-	unsigned char	*d;
-	unsigned char	*s;
 
-	d = (unsigned char *)dest;
-	s = (unsigned char *)src;
-	while (n--)
-		*d++ = *s++;
-	return (dst);
 }
