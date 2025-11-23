@@ -6,7 +6,7 @@
 /*   By: omlouk <omlouk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 13:06:38 by omlouk            #+#    #+#             */
-/*   Updated: 2025/11/23 11:51:13 by omlouk           ###   ########.fr       */
+/*   Updated: 2025/11/23 14:54:12 by omlouk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,16 @@
 # include <stddef.h>
 # include <stdint.h>
 
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}t_list;
+t_list			*ft_lstnew(void *content);
+void			ft_lstadd_front(t_list **lst, t_list *new);
+t_list			*ft_lstlast(t_list *lst);
+int				ft_lstsize(t_list *lst);
+void			ft_lstadd_back(t_list **lst, t_list *new);
 int				ft_toupper(int arg);
 int				ft_tolower(int arg);
 size_t			ft_strlen(const char *str);
