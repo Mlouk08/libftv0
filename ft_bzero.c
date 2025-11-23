@@ -6,7 +6,7 @@
 /*   By: omlouk <omlouk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 09:12:30 by omlouk            #+#    #+#             */
-/*   Updated: 2025/11/22 18:39:29 by omlouk           ###   ########.fr       */
+/*   Updated: 2025/11/23 11:52:38 by omlouk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_bzero(void *s, size_t n)
 	char	*str;
 
 	i = 0;
-	str = (char*)s;
+	str = (char *)s;
 	while (i < n)
 	{
 		str[i] = 0;

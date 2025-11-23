@@ -6,7 +6,7 @@
 /*   By: omlouk <omlouk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/18 22:33:10 by omlouk            #+#    #+#             */
-/*   Updated: 2025/11/22 20:36:14 by omlouk           ###   ########.fr       */
+/*   Updated: 2025/11/23 11:11:02 by omlouk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	*ft_calloc(size_t nmemb, size_t size)
 
 	if (nmemb == 0 || size == 0)
 		return (malloc(0));
+	if (nmemb > SIZE_MAX / size)
+		return (0);
 	s1 = malloc(nmemb * size);
 	if (s1 == NULL)
 		return (NULL);

@@ -6,7 +6,7 @@
 /*   By: omlouk <omlouk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/19 07:34:14 by omlouk            #+#    #+#             */
-/*   Updated: 2025/11/22 20:35:40 by omlouk           ###   ########.fr       */
+/*   Updated: 2025/11/23 11:55:33 by omlouk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char    *temp;
-	size_t  i;
-	size_t  s_len;
+	char	*temp;
+	size_t	i;
+	size_t	s_len;
 
 	i = 0;
 	if (s == NULL)
