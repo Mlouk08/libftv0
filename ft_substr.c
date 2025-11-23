@@ -6,36 +6,36 @@
 /*   By: omlouk <omlouk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/19 07:34:14 by omlouk            #+#    #+#             */
-/*   Updated: 2025/11/19 09:54:04 by omlouk           ###   ########.fr       */
+/*   Updated: 2025/11/22 20:35:40 by omlouk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*temp;
-	int		i;
+	char    *temp;
+	size_t  i;
+	size_t  s_len;
 
 	i = 0;
 	if (s == NULL)
 		return (NULL);
-	if ((size_t)start > len)
+	s_len = ft_strlen(s);
+	if (start >= s_len)
 	{
-		temp = malloc(1);
-		if (temp == NULL)
-			return (NULL);
-		temp[0] = '\0';
+		temp = (char *)ft_calloc(1, 1);
 		return (temp);
 	}
-	temp = ft_calloc((len + 1), sizeof(char));
+	if (len > s_len - start)
+		len = s_len - start;
+	temp = (char *)ft_calloc(len + 1, sizeof(char));
 	if (temp == NULL)
 		return (NULL);
-	while (start < (unsigned int)len)
+	while (i < len)
 	{
-		temp[i] = s[start];
+		temp[i] = s[start + i];
 		i++;
-		start++;
 	}
 	return (temp);
 }

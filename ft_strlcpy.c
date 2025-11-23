@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strlcpy.c                                          :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: omlouk <omlouk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 10:57:52 by omlouk            #+#    #+#             */
-/*   Updated: 2025/11/19 10:59:51 by omlouk           ###   ########.fr       */
+/*   Updated: 2025/11/22 18:42:22 by omlouk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,17 @@
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	int	i;
+	size_t i;
 
 	i = 0;
-	if (ft_strlen(dst))
+	if (size == 0)
+		return (ft_strlen(src));
+	while (src[i] && i + 1 < size)
 	{
-		while (i < size - 1)
-		{
-			dst[i] = src[i];
-		}
-		if (size > 0)
-			dst[i] = '\0';
+		dst[i] = src[i];
+		i++;
 	}
+	if (size > 0)
+		dst[i] = '\0';
 	return (ft_strlen(src));
 }

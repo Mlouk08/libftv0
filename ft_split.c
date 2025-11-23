@@ -6,86 +6,55 @@
 /*   By: omlouk <omlouk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/19 10:19:56 by omlouk            #+#    #+#             */
-/*   Updated: 2025/11/19 10:53:49 by omlouk           ###   ########.fr       */
+/*   Updated: 2025/11/22 21:43:03 by omlouk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	in_set(char c, char *charset)
+static size_t	ft_countword(char const *s, char c)
 {
-	int	i;
+	size_t	count;
 
-	i = 0;
-	while (charset[i] != 0)
+	if (!*s)
+		return (0);
+	count = 0;
+	while (*s)
 	{
-		if (c == charset[i])
-			return (1);
-		i++;
+		while (*s == c)
+			s++;
+		if (*s)
+			count++;
+		while (*s != c && *s)
+			s++;
 	}
-	return (0);
+	return (count);
 }
 
-int	numwords(char *str, char *charset)
+char	**ft_split(char const *s, char c)
 {
-	int	i;
-	int	word_num;
-
-	i = 0;
-	word_num = 0;
-	while (str[i] != 0)
-	{
-		if (in_set(str[i], charset) == 0)
-			if (in_set(str[i + 1], charset) == 1 || str[i + 1] == 0)
-				word_num++;
-		i++;
-	}
-	return (word_num);
-}
-
-void	add_result(char *r_str, int start, int end, char *str)
-{
-	int	i;
-
-	i = 0;
-	while (start + i <= end)
-	{
-		r_str[i] = str[start + i];
-		i++;
-	}
-	r_str[i] = 0;
-}
-
-void	alloc_str(char **result, int w_cur, int i, int start)
-{
-	result[w_cur] = (char *)malloc(sizeof(char) * (i - start + 2));
-}
-
-char	**ft_split(char *str, char *charset)
-{
-	char	**result;
+	char	**lst;
+	size_t	word_len;
 	int		i;
-	int		w_cur;
-	int		start;
 
-	result = (char **)malloc(sizeof(char *) * (numwords(str, charset) + 1));
-	i = -1;
-	w_cur = 0;
-	start = 0;
-	while (i++, str[i] != 0)
+	lst = (char **)malloc((ft_countword(s, c) + 1) * sizeof(char *));
+	if (!s || !lst)
+		return (0);
+	i = 0;
+	while (*s)
 	{
-		if (in_set(str[i], charset) == 1 || str[i] == 0)
-			start = i + 1;
-		if (in_set(str[i], charset) == 0)
+		while (*s == c && *s)
+			s++;
+		if (*s)
 		{
-			if (in_set(str[i + 1], charset) == 1 || str[i + 1] == 0)
-			{
-				alloc_str(result, w_cur, i, start);
-				add_result(result[w_cur], start, i, str);
-				w_cur++;
-			}
+			if (!ft_strchr(s, c))
+				word_len = ft_strlen(s);
+			else
+				word_len = ft_strchr(s, c) - s;
+			lst[i++] = ft_substr(s, 0, word_len);
+			s += word_len;
 		}
 	}
-	result[w_cur] = 0;
-	return (result);
+	lst[i] = NULL;
+	return (lst);
 }

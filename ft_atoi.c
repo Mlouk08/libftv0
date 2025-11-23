@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   atoi.c                                             :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: omlouk <omlouk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 15:19:09 by omlouk            #+#    #+#             */
-/*   Updated: 2025/11/19 10:53:22 by omlouk           ###   ########.fr       */
+/*   Updated: 2025/11/22 21:39:39 by omlouk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isspace(char c)
+int	ft_isspace(int c)
 {
-	if (c == 32 || (c >= 9 && c <= 13) || c == 160)
+	if (c == 32 || (c >= 9 && c <= 13))
 		return (1);
 	return (0);
 }
 
-int	ft_atoi(char *str)
+int	ft_atoi(const char *str)
 {
 	int	nb;
 	int	i;

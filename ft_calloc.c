@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   calloc.c                                           :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: omlouk <omlouk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/18 22:33:10 by omlouk            #+#    #+#             */
-/*   Updated: 2025/11/19 10:52:56 by omlouk           ###   ########.fr       */
+/*   Updated: 2025/11/22 20:36:14 by omlouk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,6 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	s1 = malloc(nmemb * size);
 	if (s1 == NULL)
 		return (NULL);
-	ft_memset((unsigned char *)s1, 0, nmemb * size);
-	return (0);
+	ft_memset(s1, 0, nmemb * size);
+	return (s1);
 }
