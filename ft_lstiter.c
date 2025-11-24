@@ -1,28 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast.c                                       :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: omlouk <omlouk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/23 14:49:27 by omlouk            #+#    #+#             */
-/*   Updated: 2025/11/24 17:06:21 by omlouk           ###   ########.fr       */
+/*   Created: 2025/11/24 17:09:47 by omlouk            #+#    #+#             */
+/*   Updated: 2025/11/24 17:33:17 by omlouk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstlast(t_list *lst)
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	t_list	*last;
-
-	if (!lst)
-		return (NULL);
 	while (lst)
 	{
-		if (!lst->next)
-			last = lst;
+		f(lst->content);
 		lst = lst->next;
-	}
-	return (last);
+    }
 }

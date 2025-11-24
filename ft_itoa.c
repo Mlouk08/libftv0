@@ -6,7 +6,7 @@
 /*   By: omlouk <omlouk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/19 08:05:11 by omlouk            #+#    #+#             */
-/*   Updated: 2025/11/19 14:45:12 by omlouk           ###   ########.fr       */
+/*   Updated: 2025/11/24 17:26:59 by omlouk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,11 +57,3 @@ char	*ft_itoa(int n)
 		temp[size] = nb % 10 + '0';
 	return (temp);
 }
-
-// #include <stdio.h>
-
-// int main()
-// {
-// 	printf("%s", ft_itoa(0));
-// 	return 1;
-// }
