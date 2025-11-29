@@ -6,7 +6,7 @@
 #    By: omlouk <omlouk@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/22 21:08:07 by omlouk            #+#    #+#              #
-#    Updated: 2025/11/24 17:14:09 by omlouk           ###   ########.fr        #
+#    Updated: 2025/11/29 12:18:11 by omlouk           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,6 @@ ft_strncmp.c ft_strlcpy.c \
 ft_strnstr.c ft_strrchr.c ft_split.c \
 ft_substr.c ft_strtrim.c ft_tolower.c ft_toupper.c
 
-# bonus list sources (treated as bonus)
 BSRCS = ft_lstadd_back.c ft_lstadd_front.c ft_lstclear.c ft_lstdelone.c \
 ft_lstiter.c ft_lstlast.c ft_lstmap.c ft_lstnew.c ft_lstsize.c
 
@@ -40,7 +39,6 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
 
-# compile rule
 %.o: %.c $(LIBH)
 	$(CC) $(CFLAGS) -I. -c $< -o $@
 

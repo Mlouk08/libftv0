@@ -6,7 +6,7 @@
 /*   By: omlouk <omlouk@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/24 17:09:47 by omlouk            #+#    #+#             */
-/*   Updated: 2025/11/24 17:33:17 by omlouk           ###   ########.fr       */
+/*   Updated: 2025/11/29 12:24:09 by omlouk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,5 +18,5 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 	{
 		f(lst->content);
 		lst = lst->next;
-    }
+	}
 }
